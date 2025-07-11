@@ -1,11 +1,14 @@
 import java.util.Arrays;
-public class MergeSortedArrayBrute {
+public class MergeSortedArray {
+    //method1: brute force   time complexity O(m+n log(m+n))
     public static void merge(int[] nums1, int m, int[] nums2, int n) {
         for (int i = 0; i < n; i++) {
             nums1[m + i] = nums2[i];
         }
         Arrays.sort(nums1);  // total O((m+n) log(m+n))
     }
+
+    //method2:
 
     public static void main(String[] args) {
         int[] nums1 = {1, 3, 5, 0, 0, 0};
