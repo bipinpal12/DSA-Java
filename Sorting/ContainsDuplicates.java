@@ -22,15 +22,25 @@ Input: nums = [1,1,1,3,3,4,3,2,4,2]
 Output: true
  */
 
+import java.util.Arrays;
 
 public class ContainsDuplicates{
-    //method01 brute force
+    //method01 brute force O(n^2)
     public static boolean duplicates(int [] nums){
         int n = nums.length;
         for(int i=0; i<n-1; i++){
             for (int j=i+1; j<n; j++){
                 if(nums[i]== nums[j]) return true;     
             }
+        }
+        return false;
+    }
+    
+    //method03 by using sorting method O(nlogn) due to sorting & SC O(1) if sorting in place
+    public static boolean duplicateM3(int [] nums){
+        Arrays.sort(nums);
+        for (int i = 0; i < nums.length-1; i++) {
+            if(nums[i] == nums[i+1]) return true;
         }
         return false;
     }
