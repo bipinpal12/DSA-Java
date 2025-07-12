@@ -33,7 +33,7 @@ public class MajorityElement{
         return -1; //unreachable due to assumption
     }
 
-    //method02: moore's voting algorithm
+    //method02: moore's voting algorithm time complexity(0(n))
     public static int majorityElmntMooreAlgo(int [] nums){
         int count = 0, candidate = 0;
 
